@@ -9,11 +9,16 @@ body{
 
 header{
     display: grid;
-    background-image: url(https://image.shutterstock.com/image-vector/rose-pink-stars-sprocket-shiny-260nw-1129309694.jpg);
-    background-position-y: 80%;
+    background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0),#000000b3),
+    url("../assets/2-nav.png");
+    background-position-y: 57%;
+    background-repeat: no-repeat;
     grid-template-columns: repeat(6, 1fr);
     list-style: none;
     max-height: 8em;
+    text-shadow: 
+    0px 0px 3px rgb(0, 0, 0),
+    2px 2px 2px #ffffff;
 }
 .logo{
     background-image: url(../assets/Logo\ Amazing\ Events.png);
@@ -36,9 +41,7 @@ header{
     display: grid;
     width: auto;
     padding: 4%;
-    /*
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_1Awio_vY4aAN7CreB3ThdgnGLZkBmELIt6pd5T7Hq6wLjic4ibDmBmzdumMMio29XmU&usqp=CAU); */
-    background-color: transparent;
+    background-color: #0000009a;
     border: 2px solid #e0046c ;
     align-content: center;
     justify-content: center;
@@ -73,7 +76,10 @@ header{
 nav{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    background-color: black;
+    background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0),#000000b3),
+    url("../assets/2-nav.png");
+    background-position-y: 70%;
+    background-repeat: no-repeat;
     text-decoration:none;
     color: white;
     padding-bottom: 5px;
@@ -118,7 +124,7 @@ footer{
     display: grid;
     grid-template-columns: repeat(10,1fr);
     position: absolute;
-    background-color: #e0046c;
+    background-color: #000000;
     height: 70px;
     width: 100%;
     bottom: 0px;
@@ -158,4 +164,5 @@ footer{
     grid-column: 8/11;
     font-size: min(8vw,50px);
     text-align: center;
+    color: white;
 }
