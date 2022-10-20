@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.inputs{
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    margin: 4%;
+}
+.search{
+    grid-column: 7/10;
+}

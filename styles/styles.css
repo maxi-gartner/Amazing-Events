@@ -55,7 +55,7 @@ header{
     max-height: 1.8em;
 }
 .links > a > b{
-    font-size: min(2vw, 17px);
+    font-size: min(1.2vw, 17px);
     font-weight: bold;
     color:  white ;
     
@@ -90,9 +90,9 @@ nav{
     margin-left: 35px;
 }
 .pag_nav{
+    display: grid;
     grid-column: 2/5;
     text-align: center;
-    font-size: min(5vw, 60px);
     text-shadow: 
     3px 3px 1px rgb(0, 0, 0),
     5px 5px 2px #ffffff;
