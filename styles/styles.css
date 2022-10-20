@@ -73,29 +73,44 @@ header{
 nav{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    padding: 1%;
-    background-color: rgb(100, 100, 101);
+    background-color: black;
     text-decoration:none;
-    max-height: 7em;
+    color: white;
+    padding-bottom: 5px;
 }
 .buttom_back{
     grid-column: 1/2;
     font-size: min(9vw, 120px);
+    margin-left: 35px;
 }
 .pag_nav{
     grid-column: 2/5;
     text-align: center;
     font-size: min(5vw, 60px);
+    text-shadow: 
+    3px 3px 1px rgb(0, 0, 0),
+    5px 5px 2px #ffffff;
 }
 .buttom_next{
     grid-column: 5/6;
     text-align: end;
     font-size: min(9vw, 120px);
+    margin-right: 35px;
 }
 .buttom_back a,
 .buttom_next a{
     text-decoration:none;
-    color: black;
+    color: white;
+    text-shadow: 
+    3px 3px 1px rgb(0, 0, 0),
+    5px 5px 2px #ffffff;
+}
+.separator_nav_bottom{
+    display: grid;
+    grid-column: 1/6;
+    height: 2px;
+    width: 100%;
+    background-color: #ffffff;
 }
 /*---------------------foother--------------*/
 
@@ -107,24 +122,40 @@ footer{
     height: 70px;
     width: 100%;
     bottom: 0px;
-    
+    align-content: center;
+    column-gap: 20px;
 }
 
 .instagram_link{
     grid-column: 1/2;
+    display: grid;
     background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png);
     background-size: 40%;
     background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-size: min(6vw,50px);
 }
 .facebook_link{
     grid-column: 2/3;
     background-image: url(https://logodownload.org/wp-content/uploads/2014/09/facebook-logo-3-1.png);
     background-size: 40%;
     background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-size: min(6vw,50px);
 }
 .whats_app_link{
     grid-column: 3/4;
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8uZW5ExhaA8Uqv-vvixglMMwVUAtm9Lsirg&usqp=CAU);
-    background-size: 50%;
+    background-image: url(https://assets.stickpng.com/images/580b57fcd9996e24bc43c543.png);
+    background-size: 40%;
     background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-size: min(6vw,50px);
+}
+.cohort{
+    grid-column: 8/11;
+    font-size: min(8vw,50px);
+    text-align: center;
 }
