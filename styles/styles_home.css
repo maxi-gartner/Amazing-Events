@@ -1,13 +1,36 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'PT Sans' , sans-serif;
 }
 
 .inputs{
     display: grid;
     grid-template-columns: repeat(9, 1fr);
     margin: 4%;
+    position: relative;
 }
 .search{
-    grid-column: 7/10;
+    grid-column: 7/9;
+}
+.search input{
+    width: 140%;
+    height: 30px;
+    padding: 0 20px;
+    font-size: 18px;
+    color: black;
+    outline: none;
+    border: 1px solid rgb(0, 170, 255);
+}
+.buttom_search{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 0;
+    right: 0;
+    background-color: rgb(0, 170, 255);
+    line-height: 30px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
 }
