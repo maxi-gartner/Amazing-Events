@@ -1,6 +1,5 @@
 *{
-margin: 0%;
-margin: 0%;
+
 font-family: 'PT Sans' , sans-serif;
 }
 
@@ -43,7 +42,7 @@ header{
 }
 .links a{
     display: grid;
-    width: min(20vw, 157px);
+    width: min(20vw, 100%);
     background-color: #0000009a;
     border: 2px solid #e0046c ;
     text-align: center;
@@ -53,7 +52,8 @@ header{
     2px 2px 4px  #e0046c ,
     4px 4px 5px #ffffff;
     transition: 0.5s;
-    max-height: 1.8em;
+    max-height: 28px;
+    
     overflow: hidden;
 }
 .links > a > b{
@@ -140,7 +140,7 @@ footer{
     align-content: center;
     column-gap: 20px;
     color: white;
-    background-color: #e0046c;
+    background-color: #000000;
 }
 
 .instagram_link{
