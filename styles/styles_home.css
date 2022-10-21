@@ -1,39 +1,30 @@
 *{
-    
     font-family: 'PT Sans' , sans-serif;
-    
 }
 
 .inputs{
     display: grid;
     grid-template-columns: repeat(9, 1fr);
-    margin: 4%;
-    margin-right: 0;
     position: relative;
     list-style: none;
-    column-gap: 20px;
     max-height: 1.8em;
-    margin-right: 50px;
+    margin-right: 1vw;
+    margin-top: 20px;
 }
 .search{
     grid-column: 7/10;
-}
-.inputs_checkbox{
-    display: grid;
-    grid-column: 1/6;
-    grid-template-columns: repeat(auto-fill, minmax(5rem,1fr));
-    column-gap: 4vw;
-    row-gap: 1vw;
+    
 }
 .search input{
     width: 100%;
     height: 40px;
-    padding: 0 20px;
+    padding: 0 7px;
     font-size: 18px;
     color: black;
     outline: none;
     border: 1px solid rgb(0, 170, 255);
-    border-radius: 25px;
+    border-radius: 20px;
+    margin-top: 7px;
 }
 .buttom_search{
     position: absolute;
@@ -43,20 +34,33 @@
     right: 0;
     background-color: rgb(0, 170, 255);
     line-height: 40px;
-    border-radius: 25px;
+    border-radius: 50%;
     text-align: center;
     color: white;
     cursor: pointer;
+    margin-top: 7px;
 }
-.categories{
-    list-style: none;
+
+.inputs_checkbox{
+    grid-column: 1/7;
+    border: 3px solid rgba(255, 255, 255, 0.081);
+    padding: 5px 15px 5px 42px;
+    display: inline-block;
+    position: relative;
+    font-size: 1em;
+    border-radius: 3px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease; /*transicion de los label*/
+    -o-transition:all 0.3s ease;
+    transition: all 0.3s ease;
+    font-size: 17px;
+    min-width: 370px;
 }
 .inputs input[type="checkbox"]{
     display: none;
 }
 .inputs_checkbox label{
-    border: 3px solid rgba(0, 0, 0, 0.081);
-    padding: 5px 15px 5px 42px;
+    padding: 5px 15px 5px 55px;
     display: inline-block;
     position: relative;
     border-radius: 3px;
@@ -65,23 +69,33 @@
     -webkit-transition: all 0.3s ease; /*transicion de los label*/
     -o-transition:all 0.3s ease;
     transition: all 0.3s ease;
+    border: 1px solid rgb(0, 170, 255);
+    border-radius: 20px;
 }
 .inputs_checkbox label:hover{
     background: #6d6d6d57;
 }
 .inputs_checkbox label:before{
     content: "";
-    width: 22px; /*nuevo checkbox*/
-    height: 22px;
+    width: 20px; /*nuevo checkbox*/
+    height: 20px;
     display: inline-block; /*poner todo dentro del block*/
     background: none;
-    border: 3px solid rgb(0, 0, 0);
+    border: 1px solid rgb(0, 170, 255);
     border-radius:3%;
     position: absolute;
-    left: 14px;
+    left: 23px;
 }
-.categories1 input[type="checkbox"]:checked + label{ /*cuando en el input se apreta sobre el checkbox se aplica al label */
+.inputs_checkbox input[type="checkbox"]:checked + label{
     padding: 5px 15px;
-    background: #cbcbcb;
-    color: #000000;
+    background: rgb(0, 0, 0);
+    color: rgb(0, 170, 255);
+}
+.inputs_checkbox input[type="checkbox"]:checked + label:before{
+    display: none;
+}
+/*------------------cards---------------*/
+
+.card{
+    position: relative;
 }
