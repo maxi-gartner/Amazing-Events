@@ -7,11 +7,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Merriweather:ital@1&family=Sen&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../styles/styles.css">
-    <!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <meta name="viewport" content="width=device-width,initial-scale=1"/> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/styles_home.css">
     <title>Uncoming Event</title>
 </head>
 <body>
@@ -39,15 +39,99 @@
         <div class="separator_nav_bottom"></div>
     </nav>
     <aside></aside>
-    <main></main>
+    <main>
+        <div class="inputs">
+            <div class="inputs_checkbox">
+                    <input type="checkbox" id="categories1" name="category">
+                    <label for="categories1">Category1</label>
+                    
+                    <input type="checkbox" id="categories2" name="category">
+                    <label for="categories2">Category2</label>
+
+                    <input type="checkbox" id="categories3" name="category">
+                    <label for="categories3">Category3</label>
+
+                    <input type="checkbox" id="categories4" name="category">
+                    <label for="categories4">Category4</label>
+                    
+                    <input type="checkbox" id="categories5" name="category">
+                    <label for="categories5">Category5</label>
+            </div>
+
+            <div class="search">
+                <input type="text" id="search" name="search" placeholder="Search">
+                <div class="buttom_search">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="card" style="width: 18rem; ">
+                <img src="../assets/Concierto de musica1.jpg" class="card-img-top position-absolute top-0" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="../assets/Fiesta de disfraces1.jpg" class="card-img-top position-absolute top-0" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="../assets/Feria de comidas7.jpg" class="card-img-top position-absolute top-0" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="../assets/Cine7.jpg" class="card-img-top position-absolute top-0" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+
+    </main>
     <footer>
-        <a class="instagram_link" href="https://www.instagram.com/maxi.gartner/">
-        </a>
-        <a class="facebook_link" href="https://www.instagram.com/maxi.gartner/">
-        </a>
-        <a class="whats_app_link" href="https://www.instagram.com/maxi.gartner/">
-        </a>
-        <div class="cohort">Cohort</div>
+        <div class="div_instagram">
+            <a class="instagram_link" href="https://www.instagram.com/maxi.gartner/">
+            </a>
+            <div class="div_instagram_b">
+                <b>Instagram</b>
+            </div>
+        </div>
+        <div class="div_Facebook">
+            <a class="facebook_link" href="https://www.instagram.com/maxi.gartner/">
+            </a>
+            <div class="div_Facebook_b">
+                <b>Facebook</b>
+            </div>
+        </div>
+        <div class="div_whats_app">
+            <a class="whats_app_link" href="https://www.instagram.com/maxi.gartner/">
+            </a>
+            <div class="div_whats_app_b">
+                <b>WhatsApp</b>
+            </div>
+        </div>
+        
+        <div class="cohort">
+            <p>Cohort</p>
+        </div>
     </footer>
+    
 </body>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/712575d4a5.js" crossorigin="anonymous"></script>
+<form action="./show_data.html" method="get" class="form-registration"></form>
 </html>

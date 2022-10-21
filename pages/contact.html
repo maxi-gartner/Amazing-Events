@@ -7,11 +7,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Merriweather:ital@1&family=Sen&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../styles/styles.css">
-    <!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <meta name="viewport" content="width=device-width,initial-scale=1"/> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/styles_home.css">
     <title>Contact</title>
 </head>
 <body>
@@ -31,7 +31,7 @@
             <a href="./past_events.html"> < </a>
         </div>
         <div class="pag_nav">
-            <a> Contact </a>
+            <a> Contact us</a>
         </div>
         <div class="buttom_next">
             <a href="./stats.html"> > </a>
@@ -39,15 +39,54 @@
         <div class="separator_nav_bottom"></div>
     </nav>
     <aside></aside>
-    <main></main>
+    <main>
+        <form class="m-5">
+            <div class="mb-3">
+                <label for="exampleInputName" class="form-label">Name:</label>
+                <input type="email" class="form-control" id="exampleInputName" aria-describedby="nameHelp">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email:</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputMensagge" class="form-label">Mensagge:</label>
+                <input type="Mensagge" class="form-control" id="exampleInputMensagge" aria-describedby="MensaggeHelp">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </main>
     <footer>
-        <a class="instagram_link" href="https://www.instagram.com/maxi.gartner/">
-        </a>
-        <a class="facebook_link" href="https://www.instagram.com/maxi.gartner/">
-        </a>
-        <a class="whats_app_link" href="https://www.instagram.com/maxi.gartner/">
-        </a>
-        <div class="cohort">Cohort</div>
+        <div class="div_instagram">
+            <a class="instagram_link" href="https://www.instagram.com/maxi.gartner/">
+            </a>
+            <div class="div_instagram_b">
+                <b>Instagram</b>
+            </div>
+        </div>
+        <div class="div_Facebook">
+            <a class="facebook_link" href="https://www.instagram.com/maxi.gartner/">
+            </a>
+            <div class="div_Facebook_b">
+                <b>Facebook</b>
+            </div>
+        </div>
+        <div class="div_whats_app">
+            <a class="whats_app_link" href="https://www.instagram.com/maxi.gartner/">
+            </a>
+            <div class="div_whats_app_b">
+                <b>WhatsApp</b>
+            </div>
+        </div>
+        
+        <div class="cohort">
+            <p>Cohort</p>
+        </div>
     </footer>
+    
 </body>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/712575d4a5.js" crossorigin="anonymous"></script>
+<form action="./show_data.html" method="get" class="form-registration"></form>
 </html>
