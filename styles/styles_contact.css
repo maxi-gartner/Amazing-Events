@@ -1,0 +1,34 @@
+.form_contact{
+    background: #24303c;
+    padding: 9vw;
+    padding-top: 3vw;
+    height: 80vh;
+}
+input[type=mensagge], select {
+    height: 200px;
+}
+.buttom_form{
+    display: grid;
+    justify-items: end;
+}
+button[type=submit], select{
+    width: 200px;
+}
+input[type=name]:hover,
+input[type=mensagge]:hover,
+input[type=email]:hover{
+    background-color: #0000009a;
+    color: white;
+    border: 2px solid #ffffff9a;
+    transition: 0.3s;
+}
+input[type=name],
+input[type=mensagge],
+input[type=email]{
+    transition: 0,5s;
+}
+
+label{
+    font-weight: bold;
+    color: white;
+}
