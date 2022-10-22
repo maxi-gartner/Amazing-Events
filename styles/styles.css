@@ -2,6 +2,11 @@
 
 font-family: 'PT Sans' , sans-serif;
 }
+main{
+    background-color: #24303c;
+    padding-top: 20px;
+    min-height: 80vh;
+}
 
 body{
     position: relative;
@@ -56,7 +61,6 @@ header{
     4px 4px 5px #ffffff;
     transition: 0.5s;
     max-height: 28px;
-    
     overflow: hidden;
 }
 .links > a > b{
@@ -105,9 +109,9 @@ nav{
     text-shadow:
     0 0 7px rgb(0, 0, 0),
     0 0 10px rgb(0, 0, 0),
-    0 0 21px rgb(0, 170, 255),
-    0 0 42px rgb(0, 170, 255),
-    0 0 82px rgb(0, 170, 255);
+    0 0 21px rgb(0, 0, 0),
+    0 0 42px rgb(0, 0, 0),
+    0 0 82px rgb(0, 0, 0);
 }
 .buttom_next{
     grid-column: 5/6;

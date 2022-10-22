@@ -1,8 +1,12 @@
-.form_contact{
-    background: #24303c;
+main{
     padding: 9vw;
     padding-top: 3vw;
-    height: 80vh;
+}
+.form_contact{
+    background: #24303c;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 0px 70px 4px;
+    padding: 10px;
+    border-radius: 10px;
 }
 input[type=mensagge], select {
     height: 200px;
@@ -31,4 +35,9 @@ input[type=email]{
 label{
     font-weight: bold;
     color: white;
+}
+input[type=name],
+input[type=mensagge],
+input[type=email], select {
+    background-color:  #00000056;
 }
