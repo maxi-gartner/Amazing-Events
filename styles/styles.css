@@ -228,3 +228,8 @@
         text-align: center;
         color: white;
     }
+    @media (max-width: 600px) {
+        .cohort{
+            grid-column: 5/8;
+        }
+    }
