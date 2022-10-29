@@ -1,3 +1,4 @@
+/* 
 const data={
         "fechaActual": "2022-01-01",
         "eventos": [
@@ -158,11 +159,61 @@ const data={
         ]
     }
 
-    console.log(data)
-
-    let date = [];
+    console.log(data);
+    const date_current = data.fechaActual;
+    const all_data = [];
+    const image_events = [];
+    const date_events = [];
+    const name_events = [];
+    const description_events = [];
+    const category_events = [];
+    const place_events = [];
+    const capacity_events = [];
+    const estimate_events = [];
+    const price_events = [];
+    
     for (i= 0 ; i< data.eventos.length ; i++){
-        date.push(data.eventos[i].date)
-    }
+        all_data.push(data.eventos[i]);
+        image_events.push(data.eventos[i].image)
+        name_events.push(data.eventos[i].name)
+        date_events.push(data.eventos[i].date)
+        description_events.push(data.eventos[i].description)
+        category_events.push(data.eventos[i].category)
+        place_events.push(data.eventos[i].place)
+        capacity_events.push(data.eventos[i].capacity)
+        estimate_events.push(data.eventos[i].estimate)
+        price_events.push(data.eventos[i].price)
+    };
+    console.log(date_events);
 
-    console.log(date)
+    const fechas = formato.parse(date_events);
+    const fecha_hoy = formato.parse(date_current);
+
+    if(fechas < fecha_hoy){
+        console.log("menores",date_events);
+    }
+    
+    console.log("fecha actual",date_current);
+    console.log(image_events);
+    console.log(name_events);
+    console.log(date_events);
+    console.log(description_events);
+    console.log(category_events);
+    console.log(place_events);
+    console.log(capacity_events);
+    console.log(estimate_events);
+    console.log(price_events);
+
+    const cards_id = document.getElementById('cards_id');
+    const card_title_id = document.getElementById('card_title_id');
+    console.log(card_title_id);
+
+    name_events.forEach(name =>{
+        card_title_id.innerHTML += name
+    })*/
+
+
+    console.log(document.querySelector(".cards"))
+
+    console.log("console de prueba")
+    document.write("prueba")
