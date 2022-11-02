@@ -160,12 +160,16 @@ const data={
 
     console.log(data);
     const date_current = data.fechaActual;
-    const all_data = [];
 
+/*     const all_data = [];
     for (i= 0 ; i< data.eventos.length ; i++){
         all_data.push(data.eventos[i]);
     };
-    console.log(all_data)
+    console.log(all_data) */
+
+    const all_data = data.eventos.map((info) => {
+        return info;
+    })
 
     function addCards(all_data){
         let card = ``;
