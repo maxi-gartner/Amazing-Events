@@ -1,4 +1,3 @@
-/* 
 const data={
         "fechaActual": "2022-01-01",
         "eventos": [
@@ -162,58 +161,31 @@ const data={
     console.log(data);
     const date_current = data.fechaActual;
     const all_data = [];
-    const image_events = [];
-    const date_events = [];
-    const name_events = [];
-    const description_events = [];
-    const category_events = [];
-    const place_events = [];
-    const capacity_events = [];
-    const estimate_events = [];
-    const price_events = [];
-    
+
     for (i= 0 ; i< data.eventos.length ; i++){
         all_data.push(data.eventos[i]);
-        image_events.push(data.eventos[i].image)
-        name_events.push(data.eventos[i].name)
-        date_events.push(data.eventos[i].date)
-        description_events.push(data.eventos[i].description)
-        category_events.push(data.eventos[i].category)
-        place_events.push(data.eventos[i].place)
-        capacity_events.push(data.eventos[i].capacity)
-        estimate_events.push(data.eventos[i].estimate)
-        price_events.push(data.eventos[i].price)
     };
-    console.log(date_events);
+    console.log(all_data)
 
-    const fechas = formato.parse(date_events);
-    const fecha_hoy = formato.parse(date_current);
+    function addCards(all_data){
+        let card = ``;
 
-    if(fechas < fecha_hoy){
-        console.log("menores",date_events);
+        const tagToUpdate = document.getElementById("cards");
+        console.log("tagToUpdate", tagToUpdate);
+
+        for (let i = 0 ; i < all_data.length ; i++){
+            card += `
+            <div class="card" style="width: 18rem; ">
+                <img src="${all_data[i].image}" class="card-img-top position-absolute top-0" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">${all_data[i].name}</h5>
+                <p class="card-text">${all_data[i].description}</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            `;
     }
-    
-    console.log("fecha actual",date_current);
-    console.log(image_events);
-    console.log(name_events);
-    console.log(date_events);
-    console.log(description_events);
-    console.log(category_events);
-    console.log(place_events);
-    console.log(capacity_events);
-    console.log(estimate_events);
-    console.log(price_events);
+    tagToUpdate.innerHTML = card;
+}
 
-    const cards_id = document.getElementById('cards_id');
-    const card_title_id = document.getElementById('card_title_id');
-    console.log(card_title_id);
-
-    name_events.forEach(name =>{
-        card_title_id.innerHTML += name
-    })*/
-
-
-    console.log(document.querySelector(".cards"))
-
-    console.log("console de prueba")
-    document.write("prueba")
+addCards(all_data);
