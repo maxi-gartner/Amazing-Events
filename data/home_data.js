@@ -174,11 +174,11 @@ const data={
     function addCards(all_data){
         let card = ``;
 
-        const tagToUpdate = document.getElementById("cards");
+        const tagToUpdate = document.getElementById("cards_home");
         console.log("tagToUpdate", tagToUpdate);
 
         for (let i = 0 ; i < all_data.length ; i++){
-            card += `
+                card += `
             <div class="card" style="width: 18rem; ">
                 <img src="${all_data[i].image}" class="card-img-top position-absolute top-0" alt="...">
                 <div class="card-body">
@@ -188,6 +188,8 @@ const data={
                 </div>
             </div>
             `;
+            
+            
     }
     tagToUpdate.innerHTML = card;
 }
