@@ -163,12 +163,9 @@ console.log(data);
 const all_data = data.eventos.map((info) => {
     return info;
 })
-const date_events = data.eventos.map((info) => {
-    return info.date
-})
 
 
-function addCards(all_data, date_events){
+function addCards(all_data){
     let card = ``;
 
     const tagToUpdate = document.getElementById("cards_past");
