@@ -184,7 +184,7 @@ const data={
                 <div class="card-body">
                 <h5 class="card-title">${all_data[i].name}</h5>
                 <p class="card-text">${all_data[i].description}</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <a href="./pages/details.html" class="btn btn-primary">Go somewhere</a>
                 </div>
             </div>
             `;

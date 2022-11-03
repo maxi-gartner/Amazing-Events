@@ -121,6 +121,7 @@
         max-height: 30px;
         overflow: hidden;
         margin-top: 10px;
+        cursor: pointer;
     }
 
     @media (max-width: 990px) {
