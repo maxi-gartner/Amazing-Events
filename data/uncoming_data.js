@@ -168,15 +168,12 @@ const all_data = data.eventos.map((info) => {
 function addCards(all_data){
     let card = ``;
 
-    const tagToUpdate = document.getElementById("cards_uncoming");
-    console.log("tagToUpdate", tagToUpdate);
+    const cardUpdate = document.getElementById("cards_uncoming");
+    console.log("cardUpdate", cardUpdate);
 
     for (let i = 0 ; i < all_data.length ; i++){
 
         const date_current = (data.fechaActual);
-        console.log("date_current",date_current)
-        console.log("date_events",(all_data[i].date))
-        console.log(date_current < (all_data[i].date))
 
         if (date_current < (all_data[i].date)){
             card += `
@@ -191,7 +188,7 @@ function addCards(all_data){
         `;
         }
 }
-tagToUpdate.innerHTML = card;
+cardUpdate.innerHTML = card;
 }
 
 addCards(all_data);

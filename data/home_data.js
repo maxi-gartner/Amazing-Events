@@ -174,8 +174,8 @@ const data={
     function addCards(all_data){
         let card = ``;
 
-        const tagToUpdate = document.getElementById("cards_home");
-        console.log("tagToUpdate", tagToUpdate);
+        const cardUpdate = document.getElementById("cards_home");
+        console.log("cardUpdate", cardUpdate);
 
         for (let i = 0 ; i < all_data.length ; i++){
                 card += `
@@ -191,7 +191,7 @@ const data={
             
             
     }
-    tagToUpdate.innerHTML = card;
+    cardUpdate.innerHTML = card;
 }
 
 addCards(all_data);

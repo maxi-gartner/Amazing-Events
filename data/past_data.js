@@ -168,8 +168,8 @@ const all_data = data.eventos.map((info) => {
 function addCards(all_data){
     let card = ``;
 
-    const tagToUpdate = document.getElementById("cards_past");
-    console.log("tagToUpdate", tagToUpdate);
+    const cardUpdate = document.getElementById("cards_past");
+    console.log("cardUpdate", cardUpdate);
 
     for (let i = 0 ; i < all_data.length ; i++){
 
@@ -191,7 +191,7 @@ function addCards(all_data){
         `;
         }
 }
-tagToUpdate.innerHTML = card;
+cardUpdate.innerHTML = card;
 }
 
 addCards(all_data);
