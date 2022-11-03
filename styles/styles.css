@@ -97,7 +97,6 @@
     }
 
     .collapse{
-        position: absolute;
         top: 0;
         right: 0;
         height: 100%;
@@ -122,6 +121,12 @@
         overflow: hidden;
         margin-top: 10px;
         cursor: pointer;
+    }
+
+    @media (min-width: 990px) {
+        .collapse{
+            position: absolute;
+        }
     }
 
     @media (max-width: 990px) {
