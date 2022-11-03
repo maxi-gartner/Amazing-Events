@@ -182,7 +182,10 @@ function addCards(all_data){
             <div class="card-body">
             <h5 class="card-title">${all_data[i].name}</h5>
             <p class="card-text">${all_data[i].description}</p>
+            <div class="price_and_buttom">
+            <p>Price: ${all_data[i].price}</p>
             <a href="./details.html" class="btn btn-primary">Go somewhere</a>
+            </div>
             </div>
         </div>
         `;
