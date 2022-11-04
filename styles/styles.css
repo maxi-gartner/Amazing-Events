@@ -164,10 +164,10 @@
     .separator{
         display: grid;
         grid-column: 1/7;
-        height: 0.05vw;
+        height: 1px;
         background-color: #e0046c;
     }
-    /*------------------nav----------------------*/
+    /*-------------------------nav-------------------------*/
     nav2{
         display: grid;
         grid-template-columns: repeat(5, 1fr);

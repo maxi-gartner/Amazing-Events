@@ -158,27 +158,29 @@ const data={
     ]
 }
 
-console.log(data);
-
 const all_data = data.eventos.map((info) => {
     return info;
 })
 
-
 function addCards(all_data){
     let card = ``;
-
     const cardUpdate = document.getElementById("cards_past");
-    console.log("cardUpdate", cardUpdate);
+        console.log("cardUpdate", cardUpdate);
+    const date_current = (data.fechaActual);
+    const date_current_split = date_current.split("-");
+        console.log("date_current_split",date_current_split);
+    const date_current_parsed = new Date(date_current_split[0],date_current_split[1]-1,date_current_split[2]);
+        console.log(date_current_parsed);
+    const date_current_getTime = date_current_parsed.getTime();
+        console.log(date_current_getTime);
 
     for (let i = 0 ; i < all_data.length ; i++){
+        let date_events = all_data[i].date;
+        let date_events_split = date_events.split("-");
+        let date_events_parsed = new Date(date_events_split[0],date_events_split[1]-1,date_events_split[2])
+        let date_events_getTime = date_events_parsed.getTime();
 
-        const date_current = (data.fechaActual);
-        console.log("date_current",date_current)
-        console.log("date_events",(all_data[i].date))
-        console.log(date_current < (all_data[i].date))
-
-        if (date_current > (all_data[i].date)){
+        if (date_current_getTime > date_events_getTime){
             card += `
         <div class="card" style="width: 18rem; ">
             <img src="${all_data[i].image}" class="card-img-top position-absolute top-0" alt="...">
