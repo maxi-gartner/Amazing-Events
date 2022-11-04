@@ -6,6 +6,8 @@
         background-color: #24303c;
         padding-top: 20px;
         min-height: 80vh;
+        padding-left: 5vw;
+        padding-right: 5vw;
     }
     
     body{
