@@ -161,18 +161,18 @@ const data={
 const all_data = data.eventos.map((info) => {
     return info;
 })
+const date_current = (data.fechaActual);
+const date_current_split = date_current.split("-");
+    console.log("date_current_split",date_current_split);
+const date_current_parsed = new Date(date_current_split[0],date_current_split[1]-1,date_current_split[2]);
+    console.log(date_current_parsed);
+const date_current_getTime = date_current_parsed.getTime();
+    console.log(date_current_getTime);
+
 
 function addCards(all_data){
     let card = ``;
     const cardUpdate = document.getElementById("cards_past");
-        console.log("cardUpdate", cardUpdate);
-    const date_current = (data.fechaActual);
-    const date_current_split = date_current.split("-");
-        console.log("date_current_split",date_current_split);
-    const date_current_parsed = new Date(date_current_split[0],date_current_split[1]-1,date_current_split[2]);
-        console.log(date_current_parsed);
-    const date_current_getTime = date_current_parsed.getTime();
-        console.log(date_current_getTime);
 
     for (let i = 0 ; i < all_data.length ; i++){
         let date_events = all_data[i].date;
