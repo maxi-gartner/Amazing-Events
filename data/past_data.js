@@ -189,7 +189,7 @@ function addCards(all_data){
             <p class="card-text">${all_data[i].description}</p>
             <div class="price_and_buttom">
             <p>Price: ${all_data[i].price}</p>
-            <a href="./details.html" class="btn btn-primary">Go somewhere</a>
+            <a href="./details.html" class="btn btn-primary">See more</a>
             </div>
             </div>
         </div>

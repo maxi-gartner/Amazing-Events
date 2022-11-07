@@ -158,8 +158,6 @@ const data={
     ]
 }
 
-console.log(data);
-
 const all_data = data.eventos.map((info) => {
     return info;
 })
@@ -171,6 +169,7 @@ const date_current_parsed = new Date(date_current_split[0],date_current_split[1]
 const date_current_getTime = date_current_parsed.getTime();
     console.log(date_current_getTime);
 
+
 function addCards(all_data){
     let card = ``;
     const cardUpdate = document.getElementById("cards_uncoming");
@@ -178,23 +177,23 @@ function addCards(all_data){
     for (let i = 0 ; i < all_data.length ; i++){
         let date_events = all_data[i].date;
         let date_events_split = date_events.split("-");
-        let date_events_parsed = new Date(date_events_split[0],date_events_split[1]-1,date_events_split[2]);
+        let date_events_parsed = new Date(date_events_split[0],date_events_split[1]-1,date_events_split[2])
         let date_events_getTime = date_events_parsed.getTime();
-            console.log("date_events_getTime",date_events_getTime);
 
         if (date_current_getTime < date_events_getTime){
             card += `
-            <div class="cards" id="cards">
-            <h2>hola</h2>
-            <div class="card" style="width: 18rem; ">
-                <img src="./assets/Concierto de musica1.jpg" class="card-img-top position-absolute top-0" alt="...">
-                <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-                
-            </div>;`
+        <div class="card" style="width: 18rem; ">
+            <img src="${all_data[i].image}" class="card-img-top position-absolute top-0" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">${all_data[i].name}</h5>
+            <p class="card-text">${all_data[i].description}</p>
+            <div class="price_and_buttom">
+            <p>Price: ${all_data[i].price}</p>
+            <a href="./details.html" class="btn btn-primary">See more</a>
+            </div>
+            </div>
+        </div>
+        `;
         }
 }
 cardUpdate.innerHTML = card;

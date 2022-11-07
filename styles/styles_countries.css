@@ -2,13 +2,16 @@
     padding: 0;
     margin: 0;
 }
-
+body{
+    background-color: #24303c;
+}
+main{
+    background-color: #24303c;
+}
 .countries{
     display: grid;
-    width: 100%;
     grid-template-columns: repeat(auto-fill, minmax(35rem,1fr));
     padding-top: 20px;
-    background-color: #24303c;
     justify-items: center;
 }
 
@@ -64,4 +67,35 @@
 }
 a{
     color: white;
+}
+@media (max-width: 600px) {
+    *{
+        overflow: none;
+    }
+    .card{
+        width: 330px;
+        height: auto;
+        justify-items: center;
+        text-align: center;
+        overflow: none;
+    }
+    .countries{     
+        grid-template-columns: none
+    }
+    .card-info{
+        grid-column: 1/5;
+        width: 290px;
+
+    }
+    .card-img{
+        grid-column: 1/5;
+        width: 100%;
+    }
+    .card-title,
+    .card-comon,
+    .card-utc,
+    .card-map{
+        height: auto;
+        margin-bottom: 20px;
+}
 }

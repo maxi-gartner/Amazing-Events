@@ -177,3 +177,19 @@
     justify-content: space-between;
     align-items: center;
 }
+.price_and_buttom{
+    height: 50px;
+}
+.card-text{
+    height: 85px;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+.card-title{
+    height: 45px;
+    margin-bottom: 2px;
+}
+.btn{
+    background-color: rgb(0, 170, 255);
+}
