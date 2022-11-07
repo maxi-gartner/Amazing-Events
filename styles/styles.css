@@ -171,7 +171,7 @@
     /*-------------------------nav-------------------------*/
     nav2{
         display: grid;
-        grid-template-columns: 
+        grid-template-columns: repeat(5, 1fr);
         background-color: #1c1e21;
         background-position-y: 63%;
         background-size: cover;

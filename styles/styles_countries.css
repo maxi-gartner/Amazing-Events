@@ -58,3 +58,10 @@
 .card-map{
     font-size: 12px;
 }
+.icon-contries{
+    content: "";
+    background-color: yellowgreen;
+}
+a{
+    color: white;
+}

@@ -27,9 +27,12 @@ function addCards(countries){
             <div class="card-body">
             <div class="card-info">
             <h5 class="card-title">${countries[i].name.official}</h5>
-            <h5 class="card-comon">${countries[i].name.common}</h5>
-            <h5 class="card-utc">${countries[i].timezones}</h5>
-            <a class="card-map" href="${countries[i].maps.googleMaps}" target="_blank" >Google Maps</a>
+            <h5 class="card-comon"><img src="${countries[i].flags.png}" width="20" height="16" class="icon-contries" border= "1px""></svg> ${countries[i].name.common}</h5>
+            <h5 class="card-utc"><i class="bi bi-clock-fill"></i><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock-fill" viewBox="0 0 16 16">
+            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+            </svg> ${countries[i].timezones}</h5>
+            <a class="card-map" href="${countries[i].maps.googleMaps}" target="_blank" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg> Google Maps</a>
             </div>
             </div>
             <img src="${countries[i].flags.png}" class="card-img">
