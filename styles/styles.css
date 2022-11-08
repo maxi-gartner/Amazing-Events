@@ -106,7 +106,6 @@
         background-repeat: no-repeat;
         text-decoration:none;
         padding-bottom: 5px;
-        max-height: 3em;
     }
     @media (max-width: 600px) {
         nav{align-items: center;
@@ -220,5 +219,12 @@
     @media (max-width: 600px) {
         .cohort{
             grid-column: 5/8;
+        }
+    }
+
+    
+    @media (max-width: 418px) {
+        .pag_nav{
+            font-size: min(7vw, 34px);
         }
     }
