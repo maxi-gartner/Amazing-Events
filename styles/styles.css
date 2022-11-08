@@ -157,7 +157,7 @@
         margin: 0;
         padding: 0;
         display: grid;
-        grid-template-columns: repeat(20,1fr);
+        grid-template-columns: repeat(7,1fr);
         position: absolute;
         background-color: #000000;
         height: 42px;
@@ -166,29 +166,44 @@
         align-content: center;
         column-gap: 20px;
         color: white;
-        padding-left: 30px;
         align-items: flex-start;
     }
     
+    .div_links_footer{
+        display: grid;
+        grid-column: 1/2;
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: space-between;
+    }
+    .instagram{
+        background-color: rgba(61, 61, 61, 0.5);
+    }
+    .facebook{
+        background-color: #ffffff85;
+    }
+    .whats_app{
+        background-color: rgba(1, 156, 78, 0.5);
+    }
+
     .instagram_link{
         display: grid;
-        margin-top: 1px;
         background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png);
         background-repeat: no-repeat;
         background-position-x: 50%;
         background-position-y: 50%;
-        background-size: min(4vw,23px);
-        height: 40px;
+        background-size: 23px;
+        height: 41px;
+        width: 60px;
     }
     .facebook_link{
         display: grid;
-        margin-top: 1px;
         background-image: url(https://logodownload.org/wp-content/uploads/2014/09/facebook-logo-3-1.png);
         background-repeat: no-repeat;
         background-position-x: 50%;
         background-position-y: 50%;
-        background-size: min(4vw,23px);
-        height: 40px;
+        background-size: 23px;
+        height: 41px;
+        width: 60px;
     }
     .whats_app_link{
         display: grid;
@@ -197,11 +212,12 @@
         background-repeat: no-repeat;
         background-position-x: 50%;
         background-position-y: 50%;
-        background-size: min(4vw,23px);
-        height: 40px;
+        background-size: 23px;
+        height: 41px;
+        width: 60px;
     }
     .cohort{
-        grid-column: 19/20;
+        grid-column: 7/8;
         font-size: 25px;
         text-align: center;
         color: white;
@@ -219,4 +235,11 @@
         .pag_nav{
             font-size: min(7vw, 34px);
         }
+        .cohort{
+            grid-column: 3/4;
+            font-size: 22px;
+    }
+    footer{
+        grid-template-columns: repeat(4,1fr);
+    }
     }
