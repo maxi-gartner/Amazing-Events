@@ -158,11 +158,25 @@ const data={
         ]
     }
 
-    const all_data = data.eventos.map((info) => {
-        return info;
+    document.addEventListener('DOMContentLoaded', e => {
+        fetchData();
     })
 
-    function addCards(all_data) {
+    const fetchData = async () => {
+        try {
+            const all_data = data.eventos.map((info) => {
+                return info;
+            })
+            addCards(all_data)
+            filterEvents(all_data)
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+
+
+    const addCards = all_data => {
 
         const cards= document.querySelector("#cards_home");
         const template = document.querySelector("#template-cards").content;
