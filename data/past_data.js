@@ -170,33 +170,31 @@ const date_current_getTime = date_current_parsed.getTime();
     console.log(date_current_getTime);
 
 
-function addCards(all_data){
-    let card = ``;
-    const cardUpdate = document.getElementById("cards_past");
+function addCards(all_data) {
 
-    for (let i = 0 ; i < all_data.length ; i++){
-        let date_events = all_data[i].date;
+    const cards = document.querySelector('#cards_past');
+    const template = document.querySelector('#template-cards').content;
+    const fragment = document.createDocumentFragment();
+
+    all_data.forEach((data) =>{
+        let date_events = data.date;
         let date_events_split = date_events.split("-");
-        let date_events_parsed = new Date(date_events_split[0],date_events_split[1]-1,date_events_split[2])
+        let date_events_parsed = new Date(date_events_split[0],date_events_split[1]-1,date_events_split[2]);
         let date_events_getTime = date_events_parsed.getTime();
 
-        if (date_current_getTime > date_events_getTime){
-            card += `
-        <div class="card" style="width: 18rem; ">
-            <img src="${all_data[i].image}" class="card-img-top position-absolute top-0" alt="...">
-            <div class="card-body">
-            <h5 class="card-title">${all_data[i].name}</h5>
-            <p class="card-text">${all_data[i].description}</p>
-            <div class="price_and_buttom">
-            <p>Price: ${all_data[i].price}</p>
-            <a href="./details.html" class="btn btn-primary">See more</a>
-            </div>
-            </div>
-        </div>
-        `;
-        }
-}
-cardUpdate.innerHTML = card;
+        if(date_current_getTime > date_events_getTime){
+            template.querySelector('.card-title').textContent = data.name;
+            template.querySelector('img').src = data.image;
+            template.querySelector('.card-text').textContent = data.description;
+            template.querySelector('.price_and_buttom p').textContent = ("Price: " + data.price);
+            
+            const clone = template.cloneNode(true);
+            fragment.appendChild(clone);
+            
+
+    }
+    });
+    cards.appendChild(fragment);
 }
 
 addCards(all_data);

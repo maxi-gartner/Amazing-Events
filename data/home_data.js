@@ -158,43 +158,26 @@ const data={
         ]
     }
 
-    console.log(data);
-    const date_current = data.fechaActual;
-
-/*     const all_data = [];
-    for (i= 0 ; i< data.eventos.length ; i++){
-        all_data.push(data.eventos[i]);
-    };
-    console.log(all_data) */
-
     const all_data = data.eventos.map((info) => {
         return info;
     })
 
-    function addCards(all_data){
-        let card = ``;
+    function addCards(all_data) {
 
-        const cardUpdate = document.getElementById("cards_home");
-        console.log("cardUpdate", cardUpdate);
-
-        for (let i = 0 ; i < all_data.length ; i++){
-                card += `
-            <div class="card" style="width: 18rem; ">
-                <img src="${all_data[i].image}" class="card-img-top position-absolute top-0" alt="...">
-                <div class="card-body">
-                <h5 class="card-title">${all_data[i].name}</h5>
-                <p class="card-text">${all_data[i].description}</p>
-                <div class="price_and_buttom">
-                <p>Price: ${all_data[i].price}</p>
-                <a href="./pages/details.html" class="btn btn-primary">See more</a>
-                </div>
-                </div>
-            </div>
-            `;
-            
-            
+        const cards= document.querySelector("#cards_home");
+        const template = document.querySelector("#template-cards").content;
+        const fragment = document.createDocumentFragment();
+    
+        all_data.forEach((data) => {
+                template.querySelector('.card-title').textContent = data.name;
+                template.querySelector('img').src = data.image;
+                template.querySelector('.card-text').textContent = data.description;
+                template.querySelector('.price_and_buttom p').textContent = ("Price: " + data.price);
+                
+                const clone = template.cloneNode(true);
+                fragment.appendChild(clone);
+        });
+        cards.appendChild(fragment);
     }
-    cardUpdate.innerHTML = card;
-}
-
-addCards(all_data);
+    
+    addCards(all_data);

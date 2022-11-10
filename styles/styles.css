@@ -176,13 +176,14 @@
         justify-content: space-between;
     }
     .instagram{
-        background-color: rgba(61, 61, 61, 0.5);
+        background-image: radial-gradient(rgb(255, 0, 221) 0%, transparent 70%, rgb(0, 0, 0) 40%);
+        
     }
     .facebook{
-        background-color: #ffffff85;
+        background-image: radial-gradient(rgb(0, 17, 255) 0%, transparent 70%, rgb(0, 0, 0) 40%);
     }
     .whats_app{
-        background-color: rgba(1, 156, 78, 0.5);
+        background-image: radial-gradient(rgb(0, 17, 255) 0%, transparent 70%, rgb(0, 0, 0) 40%);
     }
 
     .instagram_link{
