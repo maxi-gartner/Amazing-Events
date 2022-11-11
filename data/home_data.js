@@ -157,28 +157,21 @@ const data={
         }
         ]
     }
+    
+    const cards= document.querySelector("#cards_home");
+
 
     document.addEventListener('DOMContentLoaded', e => {
-        fetchData();
+        const all_data = data.eventos.map((info) => {
+            return info;
+        })
+        console.log(all_data);
+        addCards(all_data)
+        filterEvents(all_data)
     })
-
-    const fetchData = async () => {
-        try {
-            const all_data = data.eventos.map((info) => {
-                return info;
-            })
-            addCards(all_data)
-            filterEvents(all_data)
-        } catch (error) {
-            console.log(error);
-        }
-    }
-
 
 
     const addCards = all_data => {
-
-        const cards= document.querySelector("#cards_home");
         const template = document.querySelector("#template-cards").content;
         const fragment = document.createDocumentFragment();
     

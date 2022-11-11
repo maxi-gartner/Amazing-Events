@@ -61,7 +61,7 @@
     </nav2>
     <aside></aside>
     <main>
-        <div class="inputs" id ="filter">
+        <form class="inputs" id ="filter">
             <div class="inputs_checkbox">
                     <input type="checkbox" id="categories1" name="category">
                     <label for="categories1">Category1</label>
@@ -71,21 +71,20 @@
 
                     <input type="checkbox" id="categories3" name="category">
                     <label for="categories3">Category3</label>
-
+                    
                     <input type="checkbox" id="categories4" name="category">
                     <label for="categories4">Category4</label>
                     
                     <input type="checkbox" id="categories5" name="category">
                     <label for="categories5">Category5</label>
             </div>
-
             <div class="search">
                 <input type="text" id="search" name="search" placeholder="Search">
-                <div class="buttom_search">
+                <div class="buttom_search" id="send">
                     <i class="fas fa-search"></i>
                 </div>
             </div>
-        </div>
+        </form>
         <div class="cards" id="cards_home"></div>
 
         <template id="template-cards">
@@ -95,7 +94,7 @@
                 <h5 class="card-title">tit</h5>
                 <p class="card-text">description</p>
                 <div class="price_and_buttom">
-                <p>price</p>
+                <p>Price: </p>
                 <a href="./details.html" class="btn btn-primary">See more</a>
                 </div>
                 </div>
