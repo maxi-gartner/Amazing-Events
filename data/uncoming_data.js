@@ -254,7 +254,6 @@ function addCards(all_data) {
             const clone = template.cloneNode(true);
             fragment.appendChild(clone);
             
-
     }
     });
     cards.appendChild(fragment);
