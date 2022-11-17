@@ -171,11 +171,11 @@ const data={
     })
 
 
-    const addCards = filterEvents => {
+    const addCards = all_data => {
         const template = document.querySelector("#template-cards").content;
         const fragment = document.createDocumentFragment();
     
-        filterEvents.forEach((data) => {
+        all_data.forEach((data) => {
                 template.querySelector('.card-title').textContent = data.name;
                 template.querySelector('img').src = data.image;
                 template.querySelector('.card-text').textContent = data.description;
