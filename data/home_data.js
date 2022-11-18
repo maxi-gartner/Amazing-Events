@@ -159,6 +159,9 @@ const data={
     }
     
     const cards= document.querySelector("#cards_home");
+    const all_data = data.eventos.map((info) => {
+        return info;
+    })
 
 
     document.addEventListener('DOMContentLoaded', e => {
@@ -168,6 +171,7 @@ const data={
         console.log(all_data);
         addCards(all_data)
         filterEvents(all_data)
+        addCheckbox(all_data)
     })
 
 
@@ -186,21 +190,36 @@ const data={
         });
         cards.appendChild(fragment);
     }
-    addCards(all_data);
 
-    
+    console.log("hasta aca funciona")
+
+//--------------------------checkbox---------------
+
     const checkbox= document.querySelector('#checkbox-home')
 
     const addCheckbox = all_data => {
         const template = document.querySelector("#template-checkbox").content;
         const fragment = document.createDocumentFragment();
 
-        all_data.forEach((data) => {
-            template.querySelector('label').textContent = data.category
+        const categories = all_data.map(data => {
+            return data.category
+        })
+        console.log("categories", categories)
 
-            const clone = template.cloneNode(true);
-            fragment.appendChild(clone);
+        let res = categories.reduce((a, e) => {
+            if(!a.find(d => d == e)){
+                a.push(e)
+            }
+            return a;
+        },[])
+        console.log(res)
+
+        res.forEach((data) => {
+            template.querySelector('label').textContent = data
+            const cloneCheckBox = template.cloneNode(true);
+            fragment.appendChild(cloneCheckBox);
         })
         checkbox.appendChild(fragment)
     }
-    addCheckbox(all_data)
+
+    console.log("despues de addCheckbox")
