@@ -62,22 +62,14 @@
     <aside></aside>
     <main>
         <form class="inputs" id ="filter">
-            <div class="inputs_checkbox">
-                    <input type="checkbox" id="categories1" name="category">
-                    <label for="categories1">Category1</label>
-                    
-                    <input type="checkbox" id="categories2" name="category">
-                    <label for="categories2">Category2</label>
 
-                    <input type="checkbox" id="categories3" name="category">
-                    <label for="categories3">Category3</label>
-                    
-                    <input type="checkbox" id="categories4" name="category">
-                    <label for="categories4">Category4</label>
-                    
-                    <input type="checkbox" id="categories5" name="category">
-                    <label for="categories5">Category5</label>
-            </div>
+                    <div class="inputs_checkbox" id="checkbox-home"></div>
+
+            <template id="template-checkbox">
+                    <input type="checkbox" id="categories" name="category">
+                    <label for="categories1">Category1</label>
+            </template>
+            
             <div class="search">
                 <input type="text" id="search" name="search" placeholder="Search">
                 <div class="buttom_search" id="send">
@@ -85,7 +77,8 @@
                 </div>
             </div>
         </form>
-        <div class="cards" id="cards_home"></div>
+
+                    <div class="cards" id="cards_home"></div>
 
         <template id="template-cards">
             <div class="card" style="width: 18rem; ">

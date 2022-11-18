@@ -9,7 +9,7 @@ const filterEvents = all_data => {
         const filterCards = all_data.filter(item => {
             const typing = item.name.toLowerCase();
             if(typing.indexOf(searchText) !== -1) {
-                cards.innerHTML = ``
+                cards.textContent = ``
                 return item
             }
         })

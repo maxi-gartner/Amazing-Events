@@ -186,5 +186,21 @@ const data={
         });
         cards.appendChild(fragment);
     }
-    
     addCards(all_data);
+
+    
+    const checkbox= document.querySelector('#checkbox-home')
+
+    const addCheckbox = all_data => {
+        const template = document.querySelector("#template-checkbox").content;
+        const fragment = document.createDocumentFragment();
+
+        all_data.forEach((data) => {
+            template.querySelector('label').textContent = data.category
+
+            const clone = template.cloneNode(true);
+            fragment.appendChild(clone);
+        })
+        checkbox.appendChild(fragment)
+    }
+    addCheckbox(all_data)
