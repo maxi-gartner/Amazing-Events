@@ -158,23 +158,24 @@ const data={
         ]
     }
     
-    const cards= document.querySelector("#cards_home");
-    const all_data = data.eventos.map((info) => {
-        return info;
-    })
-
-
     document.addEventListener('DOMContentLoaded', e => {
         const all_data = data.eventos.map((info) => {
             return info;
         })
-        console.log(all_data);
-        addCards(all_data)
-        filterEvents(all_data)
-        addCheckbox(all_data)
-    })
+        filterEvents(all_data);
+        addCards(filterCategory);
+        cardsCheckbox()
+    });
+    
+    const cards= document.querySelector("#cards_home");
+    const all_data = data.eventos.map((info) => {
+        return info;
+    });
 
-
+/* 
+    send.addEventListener("click", () => {
+    
+    }); */
     const addCards = all_data => {
         const template = document.querySelector("#template-cards").content;
         const fragment = document.createDocumentFragment();
@@ -184,12 +185,16 @@ const data={
                 template.querySelector('img').src = data.image;
                 template.querySelector('.card-text').textContent = data.description;
                 template.querySelector('.price_and_buttom p').textContent = ("Price: " + data.price);
+                template.querySelector('div').setAttribute("id", data.category.replace(/\s/g,''));
+                /* 
+                template.querySelector(input).className = 'card'; */
                 
                 const clone = template.cloneNode(true);
                 fragment.appendChild(clone);
         });
         cards.appendChild(fragment);
     }
+    addCards(all_data)
 
     console.log("hasta aca funciona")
 
@@ -198,28 +203,87 @@ const data={
     const checkbox= document.querySelector('#checkbox-home')
 
     const addCheckbox = all_data => {
-        const template = document.querySelector("#template-checkbox").content;
-        const fragment = document.createDocumentFragment();
+            const template = document.querySelector("#template-checkbox").content;
+            const fragment = document.createDocumentFragment();
+            const input = document.querySelector('#categories')
 
-        const categories = all_data.map(data => {
-            return data.category
-        })
-        console.log("categories", categories)
+            const categories = all_data.map(data => {
+                return data.category
+            })
 
-        let res = categories.reduce((a, e) => {
-            if(!a.find(d => d == e)){
-                a.push(e)
-            }
-            return a;
-        },[])
-        console.log(res)
-
-        res.forEach((data) => {
-            template.querySelector('label').textContent = data
-            const cloneCheckBox = template.cloneNode(true);
-            fragment.appendChild(cloneCheckBox);
-        })
-        checkbox.appendChild(fragment)
+            let res = categories.reduce((array, element) => {
+                if(!array.find(d => d == element)){
+                    array.push(element)
+                }
+                return array;
+            },[])
+            
+            res.forEach((data) => {
+                template.querySelector('label').textContent = data;
+                template.querySelector('input').setAttribute("id",data.replace(/\s/g,''));
+                template.querySelector('input').classList.add("checkboxCategory");
+                template.querySelector('label').setAttribute("for",data.replace(/\s/g,''));
+                const cloneCheckBox = template.cloneNode(true);
+                fragment.appendChild(cloneCheckBox);
+            })
+            checkbox.appendChild(fragment)
     }
+addCheckbox(all_data)
 
-    console.log("despues de addCheckbox")
+    const FoodFairCheckBox = document.getElementById("FoodFair");
+    const MuseumCheckBox = document.getElementById("Museum");
+    const CostumePartyCheckBox = document.getElementById("CostumeParty");
+    const MusicConcertCheckBox = document.getElementById("MusicConcert");
+    const RaceCheckBox = document.getElementById("Race");
+    const BookExchangeCheckBox = document.getElementById("BookExchange");
+    const CinemaCheckBox = document.getElementById("Cinema");
+    const CheckboxInputs = document.querySelectorAll(".checkboxCategory")
+    //console.log("FoodFairCheckBox", CheckboxInputs)
+    const cardsCheckbox = document.querySelectorAll(".card")
+    //console.log("cardsCheckbox",cardsCheckbox) 
+    
+    
+    
+
+FoodFairCheckBox.addEventListener("change", () => 
+    {
+        const checked = FoodFairCheckBox.checked;
+        if(checked){
+            inputsCheked.push(FoodFairCheckBox.id)
+        console.log('checkbox1 esta seleccionado',FoodFairCheckBox.id );
+        }
+    })
+    inputsCheked = [];
+    console.log(inputsCheked)
+    
+
+        const CheckboxInputID = [];
+
+        CheckboxInputs.forEach((CheckboxInput) => {
+            CheckboxInputID.push(CheckboxInput.id)
+        });
+        console.log(CheckboxInputID);
+
+        /* const cardsCheckboxID = [];
+
+        cardsCheckbox.forEach((cardCheckbox) => {
+            cardsCheckboxID.push(cardCheckbox.id)
+        });
+        console.log(cardsCheckboxID); */
+
+
+        const filterEventsCheckbox = all_data => {
+            filter.addEventListener('keyup', () =>{
+                const filterCards = all_data.filter(item => {
+                    const category = item.category.replace(/\s/g,'');
+                    if(category == CheckboxInputID) {
+                        cards.textContent = ``
+                        return item
+                    }
+                })
+                console.log(filterCards);
+                addCards(filterCards);
+            })
+        }
+        
+        console.log("funcionando");

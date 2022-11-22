@@ -42,6 +42,9 @@
     cursor: pointer;
     margin-top: 4px;
 }
+.inputs input[type="checkbox"]{
+    display: none;
+}
 
 .inputs_checkbox{
     grid-column: 1/7;
@@ -55,9 +58,6 @@
     transition: all 0.3s ease;
     font-size: 17px;
     min-width: 370px;
-}
-.inputs input[type="checkbox"]{
-    display: none;
 }
 .inputs_checkbox label{
     padding: 5px 15px 5px 45px;
@@ -73,6 +73,7 @@
     border-radius: 20px;
     color: white;
     border-bottom: 1px solid rgb(0, 170, 255);
+    width: 180px;
 }
 .inputs_checkbox label:hover{
     background: #6d6d6d57;
@@ -190,6 +191,9 @@
         padding: 0;
         min-width: auto;
         padding: 10px;
+}
+.inputs_checkbox label{
+    width: 45%;
 }
 main{
     padding-left: 0;
