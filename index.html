@@ -63,7 +63,11 @@
     <main>
         <form class="inputs" id ="filter">
 
-                    <div class="inputs_checkbox" id="checkbox-home" ></div>
+                    <div class="inputs_checkbox" id="checkbox-home" >
+                        <input type="checkbox" id="AllCategories" name="category" value="checked" class="checkboxCategory" >
+                        <label for="AllCategories" ><b><i>All Categories</i></b></label>
+                    </div>
+                    
 
             <template id="template-checkbox">
                 <input type="checkbox" id="categories1" name="category" value="checked">
@@ -88,7 +92,7 @@
                 <p class="card-text">description</p>
                 <div class="price_and_buttom">
                 <p>Price: </p>
-                <a href="./details.html" class="btn btn-primary">See more</a>
+                <a class="btn btn-primary">See more</a>
                 </div>
                 </div>
             </div>

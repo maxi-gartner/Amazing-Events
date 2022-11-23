@@ -163,8 +163,7 @@ const data={
             return info;
         })
         filterEvents(all_data);
-        addCards(filterCategory);
-        cardsCheckbox()
+        filterEventsCheckbox(all_data);
     });
     
     const cards= document.querySelector("#cards_home");
@@ -172,10 +171,6 @@ const data={
         return info;
     });
 
-/* 
-    send.addEventListener("click", () => {
-    
-    }); */
     const addCards = all_data => {
         const template = document.querySelector("#template-cards").content;
         const fragment = document.createDocumentFragment();
@@ -186,8 +181,7 @@ const data={
                 template.querySelector('.card-text').textContent = data.description;
                 template.querySelector('.price_and_buttom p').textContent = ("Price: " + data.price);
                 template.querySelector('div').setAttribute("id", data.category.replace(/\s/g,''));
-                /* 
-                template.querySelector(input).className = 'card'; */
+                template.querySelector('a').setAttribute("href", `./pages/details.html?name=${data.name.replace(/\s/g,'')}`);
                 
                 const clone = template.cloneNode(true);
                 fragment.appendChild(clone);
@@ -229,7 +223,7 @@ const data={
             checkbox.appendChild(fragment)
     }
 addCheckbox(all_data)
-
+/* 
     const FoodFairCheckBox = document.getElementById("FoodFair");
     const MuseumCheckBox = document.getElementById("Museum");
     const CostumePartyCheckBox = document.getElementById("CostumeParty");
@@ -241,8 +235,6 @@ addCheckbox(all_data)
     //console.log("FoodFairCheckBox", CheckboxInputs)
     const cardsCheckbox = document.querySelectorAll(".card")
     //console.log("cardsCheckbox",cardsCheckbox) 
-    
-    
     
 
 FoodFairCheckBox.addEventListener("change", () => 
@@ -264,26 +256,18 @@ FoodFairCheckBox.addEventListener("change", () =>
         });
         console.log(CheckboxInputID);
 
-        /* const cardsCheckboxID = [];
-
-        cardsCheckbox.forEach((cardCheckbox) => {
-            cardsCheckboxID.push(cardCheckbox.id)
-        });
-        console.log(cardsCheckboxID); */
-
-
         const filterEventsCheckbox = all_data => {
             filter.addEventListener('keyup', () =>{
-                const filterCards = all_data.filter(item => {
+                const filterCardsCheckbox = all_data.filter(item => {
                     const category = item.category.replace(/\s/g,'');
-                    if(category == CheckboxInputID) {
+                    if(category == inputsCheked) {
                         cards.textContent = ``
                         return item
                     }
                 })
-                console.log(filterCards);
-                addCards(filterCards);
+                console.log(filterCardsCheckbox);
+                addCards(filterCardsCheckbox);
             })
         }
         
-        console.log("funcionando");
+        console.log("funcionando"); */
