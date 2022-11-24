@@ -163,7 +163,6 @@ const data={
             return info;
         })
         filterEvents(all_data);
-        filterEventsCheckbox(all_data);
     });
     
     const cards= document.querySelector("#cards_home");
@@ -223,51 +222,3 @@ const data={
             checkbox.appendChild(fragment)
     }
 addCheckbox(all_data)
-/* 
-    const FoodFairCheckBox = document.getElementById("FoodFair");
-    const MuseumCheckBox = document.getElementById("Museum");
-    const CostumePartyCheckBox = document.getElementById("CostumeParty");
-    const MusicConcertCheckBox = document.getElementById("MusicConcert");
-    const RaceCheckBox = document.getElementById("Race");
-    const BookExchangeCheckBox = document.getElementById("BookExchange");
-    const CinemaCheckBox = document.getElementById("Cinema");
-    const CheckboxInputs = document.querySelectorAll(".checkboxCategory")
-    //console.log("FoodFairCheckBox", CheckboxInputs)
-    const cardsCheckbox = document.querySelectorAll(".card")
-    //console.log("cardsCheckbox",cardsCheckbox) 
-    
-
-FoodFairCheckBox.addEventListener("change", () => 
-    {
-        const checked = FoodFairCheckBox.checked;
-        if(checked){
-            inputsCheked.push(FoodFairCheckBox.id)
-        console.log('checkbox1 esta seleccionado',FoodFairCheckBox.id );
-        }
-    })
-    inputsCheked = [];
-    console.log(inputsCheked)
-    
-
-        const CheckboxInputID = [];
-
-        CheckboxInputs.forEach((CheckboxInput) => {
-            CheckboxInputID.push(CheckboxInput.id)
-        });
-        console.log(CheckboxInputID);
-
-        const filterEventsCheckbox = all_data => {
-            filter.addEventListener('keyup', () =>{
-                const filterCardsCheckbox = all_data.filter(item => {
-                    const category = item.category.replace(/\s/g,'');
-                    if(category == inputsCheked) {
-                        cards.textContent = ``
-                        return item
-                    }
-                })
-                console.log(filterCardsCheckbox);
-                addCards(filterCardsCheckbox);
-            })
-        }
-        
-        console.log("funcionando"); */

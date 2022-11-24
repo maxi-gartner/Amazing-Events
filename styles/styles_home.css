@@ -83,20 +83,18 @@
     width: 13px; /*nuevo checkbox*/
     height: 13px;
     display: inline-block; /*poner todo dentro del block*/
-    background: rgb(0, 170, 255);
+    background: #ffffff;
     border: 1px solid rgb(255, 255, 255);
-    border-radius:3%;
     position: absolute;
     left: 23px;
     bottom: 11px;
 }
 .inputs_checkbox input[type="checkbox"]:checked + label{
-    padding: 5px 15px;
-    background: rgb(0, 0, 0);
     color: rgb(0, 170, 255);
+    border-bottom: 1px solid rgb(0, 170, 255);
 }
 .inputs_checkbox input[type="checkbox"]:checked + label:before{
-    display: none;
+    background: rgb(0, 170, 255);
 }
 
 /*------------------cards---------------*/
@@ -208,4 +206,8 @@ body{
 
 label{
     color: yellowgreen;
+}
+
+.hidden {
+    display: none;
 }

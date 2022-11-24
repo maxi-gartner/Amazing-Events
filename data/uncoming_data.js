@@ -163,11 +163,9 @@ document.addEventListener('DOMContentLoaded', e => {
         return info;
     })
     filterEvents(all_data);
-    filterEventsCheckbox(all_data)
-    filterCheckBox(all_data)
 });
 
-const cards= document.querySelector("#cards_home");
+const cards= document.querySelector("#cards_uncoming");
 const all_data = data.eventos.map((info) => {
     return info;
 });
@@ -183,7 +181,6 @@ const date_current_getTime = date_current_parsed.getTime();
 
 function addCards(all_data) {
 
-    const cards= document.querySelector("#cards_uncoming");
     const template = document.querySelector("#template-cards").content;
     const fragment = document.createDocumentFragment();
 
@@ -196,13 +193,12 @@ function addCards(all_data) {
 
         if (date_current_getTime < date_events_getTime){
             template.querySelector('.card-title').textContent = data.name;
-                template.querySelector('img').src = data.image;
-                template.querySelector('.card-text').textContent = data.description;
-                template.querySelector('.price_and_buttom p').textContent = ("Price: " + data.price);
-                template.querySelector('div').setAttribute("id", data.category.replace(/\s/g,''));
-                template.querySelector('a').setAttribute("href", `../pages/details.html?name=${data.name.replace(/\s/g,'')}`);
-                /* 
-                template.querySelector(input).className = 'card'; */
+            template.querySelector('.card-title').textContent = data.name;
+            template.querySelector('img').src = data.image;
+            template.querySelector('.card-text').textContent = data.description;
+            template.querySelector('.price_and_buttom p').textContent = ("Price: " + data.price);
+            template.querySelector('div').setAttribute("id", data.category.replace(/\s/g,''));
+            template.querySelector('a').setAttribute("href", `./pages/details.html?name=${data.name.replace(/\s/g,'')}`);
                 
                 const clone = template.cloneNode(true);
                 fragment.appendChild(clone);
@@ -210,8 +206,9 @@ function addCards(all_data) {
     });
     cards.appendChild(fragment);
 }
-
 addCards(all_data);
+
+//--------------------------checkbox---------------
 
 const checkbox= document.querySelector('#checkbox-home')
 

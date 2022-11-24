@@ -12,7 +12,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/styles.css">
     <link rel="stylesheet" href="../styles/styles_home.css">
-    <script src="../data/data_events.js"></script>
     <title>Uncoming Event</title>
 </head>
 <body>
@@ -64,24 +63,21 @@
     <main>
         <form class="inputs" id ="filter">
 
-                    <div class="inputs_checkbox" id="checkbox-home" >
-                        <input type="checkbox" id="AllCategories" name="category" value="checked" class="checkboxCategory" >
-                        <label for="AllCategories" ><b><i>All Categories</i></b></label>
-                    </div>
-                    
-
-            <template id="template-checkbox">
-                <input type="checkbox" id="categories1" name="category" value="checked">
-                <label for="categories1">Category1</label>
-            </template>
+            <div class="inputs_checkbox" id="checkbox-home" ></div>
             
-            <div class="search">
-                <input type="text" id="search" name="search" placeholder="Search">
-                <buttom class="buttom_search" id="send">
-                    <i class="fas fa-search"></i>
-                </buttom>
-            </div>
-        </form>
+
+    <template id="template-checkbox">
+        <input type="checkbox" id="categories1" name="category" value="checked">
+        <label for="categories1">Category1</label>
+    </template>
+    
+    <div class="search">
+        <input type="text" id="search" name="search" placeholder="Search">
+        <buttom class="buttom_search" id="send">
+            <i class="fas fa-search"></i>
+        </buttom>
+    </div>
+</form>
 
                     <div class="cards" id="cards_uncoming"></div>
 
@@ -121,8 +117,8 @@
         </div>
     </footer>
     <script src="../data/uncoming_data.js"></script>
-    <script src="./data/filter.js"></script>
-    <script src="./data/filterCheckbox.js"></script>
+    <script src="../data/filter.js"></script>
+    <script src="../data/filterCheckbox.js"></script>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>

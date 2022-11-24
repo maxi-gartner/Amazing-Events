@@ -1,3 +1,5 @@
+console.log("filter se ejecuta despues de homedata")
+
 const filter = document.getElementById("filter");
 const inputSearch = document.getElementById("search");
 const send = document.getElementById("send");
@@ -24,5 +26,4 @@ const filterEvents = all_data => {
         
     })
 }
-
 

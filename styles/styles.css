@@ -1,6 +1,4 @@
-*{
-
-    font-family: 'PT Sans' , sans-serif;
+    *{font-family: 'PT Sans' , sans-serif;
     }
     main{
         background-color: #24303c;
@@ -40,7 +38,7 @@
         margin-right: 10px;
         font-size: 13px;
         background-color: #000000;
-        border: 2px solid #e0046c ;
+        border: 0.5px solid #e0046c ;
         text-align: center;
         border-radius: 18px;
         box-shadow: 
