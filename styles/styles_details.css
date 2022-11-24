@@ -8,7 +8,7 @@
 }
 .card{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(16rem,1fr));
+    grid-template-columns: repeat(2,1fr);
     padding: 2%;
     row-gap: 20px;
     height: 130%;
@@ -33,6 +33,7 @@
 }
 .card img{
     right: 1fr;
+    margin-top: 0;
 }
 main{
     background-color: #24303c;
@@ -40,4 +41,7 @@ main{
     padding-bottom: 10%;
     overflow: hidden;
     
+}
+.card-title{
+    margin: 0;
 }

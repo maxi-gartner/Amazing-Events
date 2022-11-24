@@ -90,29 +90,3 @@ const cardsSelectorAll = document.querySelectorAll(".card")
         addCards(all_data);
     }
     });
-
-
-
-
-/*     const filterEventsCheckbox = all_data => {
-        inputsCheked.forEach((inputCheked) => {
-            console.log(inputCheked)
-            if(inputCheked.indexOf(AllCategories) !== -1){
-                console.log("es igual a all categories")
-                //addCards(all_data);
-                cards.textContent = ``
-                addCards(all_data);
-            }else {
-                const inputsFilter = all_data.filter(item => {
-                    const category = item.category.replace(/\s/g,'')
-                    if(category === inputCheked){
-                        return item;
-                        }
-                    })
-                    console.log(inputsFilter)
-                    cards.textContent = ``
-                    addCards(inputsFilter);
-                }
-                
-            })
-        } */

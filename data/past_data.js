@@ -198,8 +198,8 @@ function addCards(all_data) {
             template.querySelector('.card-text').textContent = data.description;
             template.querySelector('.price_and_buttom p').textContent = ("Price: " + data.price);
             template.querySelector('div').setAttribute("id", data.category.replace(/\s/g,''));
-            template.querySelector('a').setAttribute("href", `./pages/details.html?name=${data.name.replace(/\s/g,'')}`);
-                
+            template.querySelector('a').setAttribute("href", `../pages/details.html?name=${data.name.replace(/\s/g,'')}`);
+                    
                 const clone = template.cloneNode(true);
                 fragment.appendChild(clone);
     }
