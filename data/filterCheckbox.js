@@ -49,8 +49,8 @@ console.log("funciaonando filter") */
 
 const CheckboxInputs = document.querySelectorAll(".checkboxCategory")
 const cardsSelectorAll = document.querySelectorAll(".card")
-    console.log("CheckboxInputs", CheckboxInputs)
-    console.log("cardsSelectorAll",cardsSelectorAll)
+    //console.log("CheckboxInputs", CheckboxInputs)
+    //console.log("cardsSelectorAll",cardsSelectorAll)
 
     CheckboxInputs.forEach((CheckboxInput) => {
         CheckboxInput.addEventListener("change", () => 
@@ -72,7 +72,7 @@ const cardsSelectorAll = document.querySelectorAll(".card")
     })
 
     let inputsCheked = [];
-    console.log(inputsCheked)
+    //console.log(inputsCheked)
 
     
     filter.addEventListener("change", () => {
@@ -83,7 +83,7 @@ const cardsSelectorAll = document.querySelectorAll(".card")
                     return item;
                     }
                 })
-                console.log(inputsFilter)
+                //console.log(inputsFilter)
                 addCards(inputsFilter);
     });
     if(inputsCheked.length === 0){

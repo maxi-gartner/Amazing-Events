@@ -5,11 +5,14 @@ const inputSearch = document.getElementById("search");
 const send = document.getElementById("send");
 
 
-const filterEvents = all_data => {
+const filterEvents = dataEvent => {
+    const { events} = dataEvent;
+        console.log("events", events)
+
     filter.addEventListener('keyup', () =>{
         const searchText = inputSearch.value.toLowerCase();
         console.log(searchText);
-        const filterCards = all_data.filter(item => {
+        const filterCards = events.filter(item => {
             const typing = item.name.toLowerCase();
             if(typing.indexOf(searchText) !== -1) {
                 return item
@@ -20,6 +23,22 @@ const filterEvents = all_data => {
             if(filterCards.length > 0) {
                 cards.textContent = ``
                 addCards(filterCards);
+            }else{
+                cards.textContent = ``
+                const addCards = () => {
+                    const template = document.querySelector("#template-cards-empty").content;
+                    const fragment = document.createDocumentFragment();
+                
+                            template.querySelector('.card-title').textContent = "Events Results";
+                            template.querySelector('img').src = "https://png.pngtree.com/png-vector/20210706/ourlarge/pngtree-no-result-search-icon-png-image_3563805.jpg";
+                            template.querySelector('.card-text').textContent = "Negative Search Results";
+                            
+                            const clone = template.cloneNode(true);
+                            fragment.appendChild(clone);
+                    
+                    cards.appendChild(fragment);
+                }
+                addCards()
             }
             
         });
