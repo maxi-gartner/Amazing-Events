@@ -4,7 +4,10 @@ const apiData = async () => {
         const res = await fetch('../api.json')
         const dataEvent = await res.json()
         console.log("dataEvent", dataEvent)
+        const { events} = dataEvent;
+        //console.log("events", events)
         addCards(dataEvent)
+        addCheckbox(events)
     }
     catch{
         console.log("error", error);
@@ -53,20 +56,19 @@ const addCards = dataEvent => {
     });
     cards.appendChild(fragment);
 }
-addCards(all_data);
 
-console.log("hasta aca funciona")
+console.log("hasta aca funciona uncomingData")
 
 //--------------------------checkbox---------------
 
 const checkbox= document.querySelector('#checkbox-home')
 
-const addCheckbox = all_data => {
+const addCheckbox = events => {
         const template = document.querySelector("#template-checkbox").content;
         const fragment = document.createDocumentFragment();
         const input = document.querySelector('#categories')
 
-        const categories = all_data.map(data => {
+        const categories = events.map(data => {
             return data.category
         })
 
@@ -87,4 +89,4 @@ const addCheckbox = all_data => {
         })
         checkbox.appendChild(fragment)
 }
-addCheckbox(all_data)
+addCheckbox(events)

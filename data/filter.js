@@ -1,13 +1,11 @@
-console.log("filter se ejecuta despues de homedata")
+//console.log("filter se ejecuta despues de homedata")
 
 const filter = document.getElementById("filter");
 const inputSearch = document.getElementById("search");
 const send = document.getElementById("send");
 
 
-const filterEvents = dataEvent => {
-    const { events} = dataEvent;
-        console.log("events", events)
+const filterEvents = events => {
 
     filter.addEventListener('keyup', () =>{
         const searchText = inputSearch.value.toLowerCase();
@@ -16,7 +14,7 @@ const filterEvents = dataEvent => {
             const typing = item.name.toLowerCase();
             if(typing.indexOf(searchText) !== -1) {
                 return item
-            }
+            } 
         })
         console.log("filterCards",filterCards);
         send.addEventListener("click", () => {
