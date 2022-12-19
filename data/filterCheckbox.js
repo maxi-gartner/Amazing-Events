@@ -1,7 +1,9 @@
 console.log("funciaonando filter")
+
+
 const filterCheckbox = events => {
+
     const CheckboxInputs = document.querySelectorAll(".checkboxCategory")
-    const cardsSelectorAll = document.querySelectorAll(".card")
         //console.log("CheckboxInputs", CheckboxInputs)
         //console.log("cardsSelectorAll",cardsSelectorAll)
 
@@ -11,7 +13,7 @@ const filterCheckbox = events => {
                 const checked = CheckboxInput.checked;
                 if(checked){
                     inputsCheked.push(CheckboxInput.id)
-                console.log(CheckboxInput.id );
+                //console.log(CheckboxInput.id );
                 }else {
                     //console.log(`input ${CheckboxInput.id} no esta chekeado   `);
                     const indice = inputsCheked.indexOf(CheckboxInput.id);
@@ -22,23 +24,25 @@ const filterCheckbox = events => {
                 }
             })
         })
-
         let inputsCheked = [];
-
-        //console.log("inputsCheked", inputsCheked)
+        console.log("inputsCheked", inputsCheked)
 
         filter.addEventListener("change", () => {
+        let eventsFilter = [];
             inputsCheked.forEach((inputCheked) => {
-                console.log("inputCheked", inputCheked)
+                //console.log("inputCheked", inputCheked)
                 const inputsFilter = events.filter(item => {
                     const category = item.category.replace(/\s/g,'')
+                    console.log("category", category)
                     if(category.indexOf(inputCheked) !== -1){
-                        return item
+                        //return item
+                        //console.log(item.name)
+                    eventsFilter.push(item)
                         }
                     })
                     console.log("inputsFilter", inputsFilter)
                     cards.textContent = ``
-                    addCards(inputsFilter);
+                    addCards(eventsFilter);
         });
         if(inputsCheked.length === 0){
             cards.textContent = ``

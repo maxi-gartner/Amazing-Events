@@ -7,7 +7,9 @@ const apiData = async () => {
         const { events} = dataEvent;
         //console.log("events", events)
         addCards(dataEvent)
+        filterEvents(events)
         addCheckbox(events)
+        filterCheckbox(events)
     }
     catch{
         console.log("error", error);
