@@ -22,3 +22,6 @@ tr{
 thead{
     border-bottom: 1px solid  #373b3e;
 }
+td{
+    width: 33.33%;
+}

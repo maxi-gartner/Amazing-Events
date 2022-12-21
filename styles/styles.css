@@ -48,7 +48,6 @@
         width: 140px;
         overflow: hidden;
         margin-top: 10px;
-        cursor: pointer;
     }
 
     @media (min-width: 990px) {

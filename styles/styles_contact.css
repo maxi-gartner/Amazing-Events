@@ -41,3 +41,6 @@ input[type=mensagge],
 input[type=email], select {
     background-color:  #00000056;
 }
+.form-control {
+    color: white;
+}
