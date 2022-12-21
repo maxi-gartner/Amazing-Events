@@ -5,11 +5,11 @@ const inputSearch = document.getElementById("search");
 const send = document.getElementById("send");
 
 
-const filterEvents = events => {
+const filterEvents = (events, currentDate) => {
 
     filter.addEventListener('keyup', () =>{
         const searchText = inputSearch.value.toLowerCase();
-        console.log(searchText);
+        console.log("searchText", searchText);
         const filterCards = events.filter(item => {
             const typing = item.name.toLowerCase();
             if(typing.indexOf(searchText) !== -1) {
@@ -20,7 +20,7 @@ const filterEvents = events => {
         send.addEventListener("click", () => {
             if(filterCards.length > 0) {
                 cards.textContent = ``
-                addCards(filterCards);
+                addCards(filterCards, currentDate);
             }else{
                 cards.textContent = ``
                 const addCards = () => {
@@ -40,6 +40,10 @@ const filterEvents = events => {
             }
             
         });
+        if(filterCards.length === events.length){
+            cards.textContent = ``
+            addCards(events, currentDate)
+        }
         
     })
 }

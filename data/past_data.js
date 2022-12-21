@@ -4,12 +4,12 @@ const apiData = async () => {
         const res = await fetch('../api.json')
         const dataEvent = await res.json()
         console.log("dataEvent", dataEvent)
-        const { events} = dataEvent;
+        const { events, currentDate} = dataEvent;
         //console.log("events", events)
-        addCards(dataEvent)
-        filterEvents(events)
+        addCards(events, currentDate)
+        filterEvents(events, currentDate)
         addCheckbox(events)
-        filterCheckbox(events)
+        filterCheckbox(events, currentDate )
     }
     catch{
         console.log("error", error);
@@ -20,8 +20,7 @@ console.log("despues de async");
 
 const cards= document.querySelector("#cards_past");
 
-const addCards = dataEvent => {
-    const { events, currentDate} = dataEvent;
+const addCards = (events, currentDate) => {
 
         console.log("events", events)
         console.log("currentDate", currentDate)

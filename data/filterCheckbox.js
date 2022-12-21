@@ -1,7 +1,7 @@
 console.log("funciaonando filter")
 
 
-const filterCheckbox = events => {
+const filterCheckbox = (events, currentDate) => {
 
     const CheckboxInputs = document.querySelectorAll(".checkboxCategory")
         //console.log("CheckboxInputs", CheckboxInputs)
@@ -42,11 +42,11 @@ const filterCheckbox = events => {
                     })
                     console.log("inputsFilter", inputsFilter)
                     cards.textContent = ``
-                    addCards(eventsFilter);
+                    addCards(eventsFilter, currentDate);
         });
         if(inputsCheked.length === 0){
             cards.textContent = ``
-            addCards(events);
+            addCards(events, currentDate);
         }
         });
 }

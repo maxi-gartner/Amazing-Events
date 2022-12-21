@@ -162,6 +162,7 @@ const revenuesFilter = events => {
                     capacity = capacity + (Number(data.capacity))
                 }
             });
+            console.log("assistance", assistance)
             //console.log("assistance",assistance)
             //console.log("capacity", capacity)
             if(resultPercentageUncoming.length < listCategories.length){
@@ -197,7 +198,8 @@ const revenuesFilter = events => {
                     capacityPast = capacityPast + (Number(data.capacity))
                 }
             });
-            //console.log("assistance",assistance)
+            
+            //console.log("assistancePast", assistancePast)
             //console.log("capacity", capacity)
             if(resultPercentagePast.length < listCategories.length){
                 resultPercentagePast.push((Math.round((assistancePast * 100)/capacityPast))+"%")}
